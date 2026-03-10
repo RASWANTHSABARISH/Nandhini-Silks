@@ -166,8 +166,9 @@
 
       <div class="featured-progress" aria-hidden="true">
         <span>01</span>
-        <div class="featured-progress-track">
-          <span class="featured-progress-fill"></span>
+        <div class="featured-progress-track" data-name="Slider">
+          <div class="featured-progress-bg"></div>
+          <div class="featured-progress-fill"></div>
         </div>
         <span>04</span>
       </div>
@@ -242,7 +243,7 @@
         <img class="wedding-image" src="images/image 2.png" alt="Wedding collections" />
       </div>
       <div class="wedding-content">
-        <svg class="wedding-heading-svg" viewBox="0 0 1000 400">
+        <svg class="wedding-heading-svg" viewBox="0 0 1000 500">
           <defs>
             <!-- TEXT FILL : Left → Right -->
             <linearGradient id="textFill" x1="0" y1="0" x2="1" y2="0">
@@ -259,12 +260,12 @@
           </defs>
 
           <!-- Line 1 -->
-          <text x="50%" y="170" text-anchor="middle" fill="#A91B43">
+          <text x="55%" y="180" text-anchor="middle" fill="url(#textFill)" stroke="url(#strokeGradient)" stroke-width="3" paint-order="stroke">
             Wedding
           </text>
 
           <!-- Line 2 -->
-          <text x="50%" y="320" text-anchor="middle" fill="#A91B43">
+          <text x="50%" y="400" text-anchor="middle" fill="url(#textFill)" stroke="url(#strokeGradient)" stroke-width="3" paint-order="stroke">
             Collections
           </text>
         </svg>

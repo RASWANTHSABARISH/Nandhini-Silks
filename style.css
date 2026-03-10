@@ -144,7 +144,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 45px;
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -374,13 +374,14 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    margin-bottom: 2px;
   }
 
   .featured-cart img {
-    width: 19px;
-    height: 28px;
+    width: 21px;
+    height: 31px;
     display: block;
-    margin-right: 20px;
+    margin-bottom:5px;
   }
 
   .featured-progress {
@@ -397,22 +398,32 @@
   }
 
   .featured-progress-track {
-    height: 3px;
-    flex: 1;
-    border-radius: 10px;
-    background: #bbb9b5;
+    display: inline-grid;
+    grid-template-columns: max-content;
+    grid-template-rows: max-content;
+    place-items: center start;
     position: relative;
-    overflow: hidden;
+    flex: 1;
+    min-width: 388.77px;
+  }
+
+  .featured-progress-bg {
+    background-color: #999894;
+    width: 388.77px;
+    height: 1.909px;
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 1.43px;
   }
 
   .featured-progress-fill {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 24%;
-    border-radius: 10px;
-    background: #121212;
+    background-color: #121212;
+    width: 146.208px;
+    height: 4.773px;
+    border-radius: 7.956px;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
   }
 
   .featured-progress-track span{
@@ -465,13 +476,18 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 1px solid #a91b43;
     position: absolute;
     left: 0;
     top: 0;
     pointer-events: none;
     z-index: 2;
     box-sizing: border-box;
+    border: 1.5px solid transparent;
+    background: linear-gradient(90deg, #a91b43 0%, #fbb624 100%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
   }
 
   .category-image {
@@ -507,9 +523,10 @@
 
   .offer-card {
     min-height: 320px;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 20px;
-    background: url("images/Rectangle 31.png") left center / cover no-repeat;
+    background: url("images/Rectangle 31.png") left center / cover no-repeat padding-box, 
+                linear-gradient(90deg, #ffffff 0%, #fbb624 100%) border-box;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     position: relative;
@@ -562,8 +579,9 @@
     min-height: 320px;
     border-radius: 20px;
     overflow: hidden;
-    border: none;
-    background:  linear-gradient(90deg, #e4cbad 0%, #ead088 100%);
+    border: 1px solid transparent;
+    background: linear-gradient(90deg, #e4cbad 0%, #ead088 100%) padding-box, 
+                linear-gradient(90deg, #a91b43 0%, #fbb624 100%) border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -606,19 +624,21 @@
     display: block;
     margin: 0 auto;
     flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+    overflow: visible;
   }
 
   .wedding-heading-svg text {
     font-family: 'Great Vibes', cursive;
-    font-size: 190px;
-    line-height: 2;
+    font-size: 230px;
   }
 
   .wedding-text {
     margin: 0;
     max-width: 240px;
     color: #333333;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 300;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -692,7 +712,7 @@
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 60px;
+    gap: 50px;
     margin-bottom: 75px;
   }
 
