@@ -339,7 +339,11 @@ body {
   line-height: 0.2;
 }
 
-.collection-cta {
+.collection-cta, .collection-link {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 90px;
   height: 28px;
   margin: 0px auto 0;
@@ -1768,6 +1772,232 @@ body {
     width: 16px;
     height: 26px;
   }
+
+}
+
+/* Category Page Styles */
+.category-page {
+  padding: 40px 0;
+  background: #fffcf0;
+}
+
+.breadcrumb {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: var(--pink);
+  text-decoration: none;
+}
+
+.category-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+}
+
+/* Sidebar Filters */
+.filters-sidebar {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.filter-group {
+  margin-bottom: 30px;
+}
+
+.filter-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-item {
+  margin-bottom: 10px;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+.filter-label input[type="checkbox"] {
+  accent-color: var(--pink);
+  width: 16px;
+  height: 16px;
+}
+
+/* Product Section */
+.product-listing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.result-count {
+  font-size: 14px;
+  color: #666;
+}
+
+.sort-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+}
+
+.product-grid-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.product-card-v2 {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.product-card-v2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.product-image-v2 {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.product-image-v2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info-v2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-desc-v2, 
+.product-rating-v2, 
+.product-category-v2 {
+  display: none;
+}
+
+.product-category-v2 {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-name-v2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 5px 0 10px;
+}
+
+.product-price-v2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--pink);
+}
+
+.product-price-old {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.pagination {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.page-link {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.page-link.active, .page-link:hover {
+  background: var(--pink);
+  color: #fff;
+  border-color: var(--pink);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+  .category-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .filters-sidebar {
+    display: none; /* We'll add a toggle for this later */
+  }
+  
+  .product-grid-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-listing-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .product-grid-main {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* Product Detail Page Styles */
+.product-detail-page {
+  padding: 40px 0;
+  background: #fffcf0;
 }
 
 /* Ensure pause on hover overrides any !important animation shorthands */
