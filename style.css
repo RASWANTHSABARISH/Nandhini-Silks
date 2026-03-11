@@ -1479,17 +1479,45 @@ body {
   }
 
   .wedding-card, .offer-card {
+    display: grid;
     grid-template-columns: 1fr;
     min-height: auto;
   }
 
   .wedding-image-wrap, .offer-image-wrap {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
     height: 240px !important;
   }
 
   .wedding-image,
   .offer-image {
     object-position: top center !important;
+  }
+
+  .offer-content {
+    position: relative !important;
+    z-index: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    min-height: auto !important;
+    margin-left: 0 !important;
+    padding: 24px 20px 28px !important;
+    gap: 12px !important;
+    text-align: left !important;
+  }
+
+  .offer-title,
+  .offer-text {
+    max-width: none !important;
+  }
+
+  .offer-link {
+    align-self: flex-start;
   }
 
 
@@ -1559,20 +1587,20 @@ body {
   }
 
   .testimonial-marquee {
-    gap: 16px !important;
+    gap: 0 !important;
     margin-bottom: 40px !important;
   }
 
   .testimonial-grid {
     animation: scroll-testimonials-mobile 25s ease-in-out infinite !important;
     gap: 16px !important;
-    padding: 0 8px !important;
+    padding: 0 16px !important;
     box-sizing: border-box;
   }
 
   .testimonial-card {
-    flex: 0 0 calc(100vw - 16px) !important;
-    width: calc(100vw - 16px) !important;
+    flex: 0 0 calc(100vw - 32px) !important;
+    width: calc(100vw - 32px) !important;
     border-radius: 15px !important;
     padding: 20px 30px !important;
     box-sizing: border-box;
