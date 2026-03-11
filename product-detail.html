@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Gold Handloom Silk Saree | Nandhini Silks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="top-header">
+    <div class="page-shell header-row">
+      <a href="index.html"><img class="brand" src="images/image 1.png" alt="Logo" /></a>
+
+      <div class="search-wrap">
+        <form action="search.html" method="GET" class="search-box">
+          <img src="images/search.svg" alt="Search" />
+          <input type="text" name="q" placeholder="Search" aria-label="Search" />
+        </form>
+      </div>
+
+      <div class="actions">
+        <a href="wishlist.html" class="icon-btn" aria-label="Favorites">
+          <img src="images/favorite.svg" alt="" width="18" height="23">
+        </a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <img src="images/local_mall.svg" alt="" width="14" height="20" />
+          <span class="cart-count">5</span>
+        </a>
+        <a href="login.html" class="login-btn">Sign in / Login</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="category.html" class="nav-item">Sarees</a>
+      <a href="women.html" class="nav-item">Women</a>
+      <a href="mens.html" class="nav-item">Mens</a>
+      <a href="kids.html" class="nav-item">Kids</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item">Contact us</a>
+    </div>
+  </nav>
+
+  <main class="product-detail-page">
+    <div class="page-shell">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> &nbsp; / &nbsp; <a href="category.html">Sarees</a> &nbsp; / &nbsp; <span>Royal Gold Silk Saree</span>
+      </div>
+
+      <div class="product-detail-grid">
+        <!-- Gallery Section -->
+        <div class="product-gallery">
+          <div class="main-product-image" id="zoomContainer">
+            <img src="images/product_detail.png" alt="Royal Gold Silk Saree" id="mainImg">
+          </div>
+          <div class="product-thumbnails">
+            <div class="thumbnail active" onclick="changeImg('images/product_detail.png', this)"><img src="images/product_detail.png" alt="View 1"></div>
+            <div class="thumbnail" onclick="changeImg('images/pro1.png', this)"><img src="images/pro1.png" alt="View 2"></div>
+            <div class="thumbnail" onclick="changeImg('images/pro2.png', this)"><img src="images/pro2.png" alt="View 3"></div>
+            <div class="thumbnail" onclick="changeImg('images/pro3.png', this)"><img src="images/pro3.png" alt="View 4"></div>
+          </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="product-info-details">
+          <div class="product-meta">
+            <p class="product-brand">Nandhini Silks Exclusive</p>
+            <p class="product-meta-item">SKU: <span class="product-sku">NS-GOLD-2024</span></p>
+          </div>
+          
+          <h1 class="product-title-detail">Royal Gold Handloom Silk Saree</h1>
+          
+          <div class="product-rating">
+            <div class="stars">★★★★★</div>
+            <span>(4.8 Rating • 120 Reviews)</span>
+          </div>
+
+          <div class="product-price-section">
+            <span class="current-price">₹7,490</span>
+            <span class="old-price">₹8,990</span>
+            <span class="discount-badge">15% OFF</span>
+          </div>
+
+          <div class="stock-status">
+            <span class="stock-badge stock-in">● In Stock</span>
+          </div>
+
+          <p class="product-description-short">
+            Experience the epitome of traditional craftsmanship with our Royal Gold Handloom Silk Saree. Woven with pure silk threads and genuine golden zari, this masterpiece features intricate peacock motifs and a rich pallu that exudes royalty. Perfect for weddings and grand occasions.
+          </p>
+
+          <!-- Attributes: Color -->
+          <div class="attribute-section">
+            <h3 class="attribute-title">Select Color:</h3>
+            <div class="swatch-container">
+                <div class="color-swatch active" style="background: #D4AF37;" title="Gold"></div>
+                <div class="color-swatch" style="background: #800000;" title="Maroon"></div>
+                <div class="color-swatch" style="background: #000080;" title="Navy Blue"></div>
+                <div class="color-swatch" style="background: #1B4D3E;" title="Emerald Green"></div>
+            </div>
+          </div>
+
+          <!-- Attributes: Size/Type -->
+          <div class="attribute-section">
+            <h3 class="attribute-title">Select Size / Length:</h3>
+            <div class="swatch-container">
+                <button class="size-btn active">Standard (6.2m)</button>
+                <button class="size-btn">Long (7.5m)</button>
+            </div>
+          </div>
+
+          <!-- Quantity / Actions -->
+          <div class="product-actions-group" style="margin-top: 30px;">
+            <div class="quantity-picker" style="margin-bottom: 20px;">
+                <button class="qty-btn" onclick="updateQty(-1)">−</button>
+                <input type="text" class="qty-input" value="1" readonly id="qtyDisp">
+                <button class="qty-btn" onclick="updateQty(1)">+</button>
+            </div>
+            
+            <div class="product-actions">
+              <button class="btn-add-cart">
+                Add to Cart
+              </button>
+              <button class="btn-buy-now">
+                Buy It Now
+              </button>
+              <button class="btn-wishlist-detail" aria-label="Add to Wishlist">
+                <img src="images/favorite.svg" alt="" width="24">
+              </button>
+            </div>
+          </div>
+
+          <div class="share-section">
+            <span class="share-title">Share this product:</span>
+            <div class="share-links">
+                <a href="#" class="share-btn" title="Facebook" aria-label="Share on Facebook">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg>
+                </a>
+                <a href="#" class="share-btn" title="Instagram" aria-label="Share on Instagram">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.417-.923 3.9 3.9 0 0 0 .923-1.417c.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.999 0zm0 1.44c2.144 0 2.405.008 3.25.047.781.036 1.206.166 1.493.28.384.148.658.324.945.61.285.286.463.56.611.944.113.287.243.712.28 1.493.038.845.046 1.106.046 3.25s-.008 2.405-.047 3.25c-.036.781-.166 1.206-.28 1.493-.148.384-.324.658-.61.945-.287.285-.56.463-.945.611-.286.113-.712.243-1.493.28-.845.038-1.106.047-3.25.047s-2.405-.009-3.25-.047c-.781-.036-1.206-.166-1.493-.28a3.14 3.14 0 0 1-.945-.611 3.14 3.14 0 0 1-.61-.945c-.114-.287-.244-.712-.28-1.493-.039-.845-.047-1.106-.047-3.25s.008-2.405.047-3.25c.036-.781.166-1.206.28-1.493.148-.384.324-.658.61-.945.286-.287.561-.463.945-.611.287-.113.712-.243 1.493-.28C5.594 1.448 5.854 1.44 8 1.44z"/>
+                    <path d="M8 3.86a4.14 4.14 0 1 0 0 8.28 4.14 4.14 0 0 0 0-8.28zm0 6.84a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4zm4.316-6.685a.972.972 0 1 1-1.944 0 .972.972 0 0 1 1.944 0z"/>
+                  </svg>
+                </a>
+                <a href="#" class="share-btn" title="Twitter" aria-label="Share on Twitter">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                  </svg>
+                </a>
+                <a href="#" class="share-btn" title="WhatsApp" aria-label="Share on WhatsApp">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.061 3.972L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                  </svg>
+                </a>
+            </div>
+          </div>
+
+          <div class="delivery-check">
+            <p class="delivery-title">Delivery & Return Status</p>
+            <div class="pincode-input-group">
+              <input type="text" class="pincode-input" placeholder="Enter Pincode">
+              <button class="btn-pincode">Check</button>
+            </div>
+            <p style="font-size: 12px; color: #666; margin-top: 8px;">Free shipping on orders above ₹5,000. Easy 7-day returns.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detail Tabs Sections -->
+      <div class="product-extra-info" style="margin-top: 60px; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+        <div class="tabs-info">
+          <button class="tab-btn active" onclick="switchTab(event, 'tabDesc')">Full Description</button>
+          <button class="tab-btn" onclick="switchTab(event, 'tabSpecs')">Specifications</button>
+          <button class="tab-btn" onclick="switchTab(event, 'tabReviews')">Reviews (120)</button>
+          <button class="tab-btn" onclick="switchTab(event, 'tabShipping')">Shipping & Returns</button>
+        </div>
+        
+        <div class="tab-pane active" id="tabDesc">
+            <div style="color: #666; line-height: 1.8;">
+                <p>This exquisite Royal Gold Handloom Silk Saree is a testament to the rich heritage of Arani silk weaving. Each thread is carefully selected to ensure a luxurious sheen and unparalleled comfort. The saree features a magnificent 'Zari' work that captures the essence of royal Indian weddings.</p>
+                <p>Hand-woven by master craftsmen, the saree takes over 15 days to complete, ensuring every detail is perfected. The vibrant gold hue is achieved using natural dyes, making it safe for all skin types and environmentally conscious.</p>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="tabSpecs" style="display: none;">
+            <table class="specs-table">
+                <tr><td class="specs-label">Material</td><td class="specs-value">100% Pure Kanchipuram Silk</td></tr>
+                <tr><td class="specs-label">Zari Type</td><td class="specs-value">Genuine Golden Zari</td></tr>
+                <tr><td class="specs-label">Length</td><td class="specs-value">6.2 Meters with 0.8m Blouse Piece</td></tr>
+                <tr><td class="specs-label">Weight</td><td class="specs-value">850 Grams</td></tr>
+                <tr><td class="specs-label">Process</td><td class="specs-value">Hand-woven on Traditional Loom</td></tr>
+                <tr><td class="specs-label">Design</td><td class="specs-value">Peacock & Temple Border Motifs</td></tr>
+            </table>
+        </div>
+
+        <div class="tab-pane" id="tabReviews" style="display: none;">
+            <div class="reviews-container">
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="reviewer-name">Ananya Sharma</span>
+                        <div class="stars-small">★★★★★</div>
+                    </div>
+                    <p style="color: #666; font-size: 14px;">The quality of the silk is amazing. It looks even more beautiful in person. Wore it for my sister's wedding and received so many compliments!</p>
+                    <span class="review-date">March 10, 2026</span>
+                </div>
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="reviewer-name">Kavitha R.</span>
+                        <div class="stars-small">★★★★★</div>
+                    </div>
+                    <p style="color: #666; font-size: 14px;">Excellent packaging and fast delivery. The 'Gold' color is exactly what I was looking for. Highly recommended.</p>
+                    <span class="review-date">March 05, 2026</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="tabShipping" style="display: none;">
+            <div style="color: #666; line-height: 1.8;">
+                <h4 style="color: #333;">Domestic Shipping (India)</h4>
+                <li>Standard Delivery: 5-7 business days.</li>
+                <li>Express Delivery: 2-3 business days.</li>
+                <h4 style="color: #333; margin-top: 20px;">International Shipping</h4>
+                <li>We ship to 50+ countries. Delivery usually takes 10-15 business days.</li>
+                <h4 style="color: #333; margin-top: 20px;">Return Policy</h4>
+                <p>We offer a 7-day hassle-free return policy. The item must be unused with all tags intact.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Related Products Section -->
+  <section class="featured-section" style="background: none; padding: 60px 0;">
+    <div class="page-shell">
+      <h2 class="category-title" style="margin-bottom: 40px; font-size: 32px;">Related Saree Collections</h2>
+      <div class="product-grid-main" style="grid-template-columns: repeat(4, 1fr);">
+        <article class="product-card-v2">
+          <div class="card-actions-overlay">
+            <button class="overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="#666"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+          </div>
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <div class="product-image-v2"><img src="images/pro1.png" alt="Pure Silk Saree"></div>
+            <div class="product-info-v2">
+              <span class="product-category-v2">Pure Silk</span>
+              <h3 class="product-name-v2">Royal Gold Silk Saree</h3>
+              <p class="product-price-v2">₹7,490</p>
+            </div>
+          </a>
+          <button class="add-to-cart-v2">Add to Cart</button>
+        </article>
+
+        <article class="product-card-v2">
+          <div class="card-actions-overlay">
+            <button class="overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="#666"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+          </div>
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <div class="product-image-v2"><img src="images/pro2.png" alt="Classic Red Saree"></div>
+            <div class="product-info-v2">
+              <span class="product-category-v2">Pure Silk</span>
+              <h3 class="product-name-v2">Kanchipuram Red Silk</h3>
+              <p class="product-price-v2">₹4,290</p>
+            </div>
+          </a>
+          <button class="add-to-cart-v2">Add to Cart</button>
+        </article>
+
+        <article class="product-card-v2">
+          <div class="card-actions-overlay">
+            <button class="overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="#666"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+          </div>
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <div class="product-image-v2"><img src="images/pro3.png" alt="Tissue Silk"></div>
+            <div class="product-info-v2">
+              <span class="product-category-v2">Tissue Silk</span>
+              <h3 class="product-name-v2">Emerald Green Tissue</h3>
+              <p class="product-price-v2">₹8,500</p>
+            </div>
+          </a>
+          <button class="add-to-cart-v2">Add to Cart</button>
+        </article>
+
+        <article class="product-card-v2">
+          <div class="card-actions-overlay">
+            <button class="overlay-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="#666"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+          </div>
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <div class="product-image-v2"><img src="images/pro1.png" alt="Pure Silk Saree"></div>
+            <div class="product-info-v2">
+              <span class="product-category-v2">Pure Silk</span>
+              <h3 class="product-name-v2">Royal Gold Silk Saree</h3>
+              <p class="product-price-v2">₹7,490</p>
+            </div>
+          </a>
+          <button class="add-to-cart-v2">Add to Cart</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recently Viewed -->
+  <section class="recently-viewed-section">
+    <div class="page-shell">
+        <h2 class="category-title" style="margin-bottom: 40px; font-size: 28px; color: #666;">Recently Viewed</h2>
+        <div class="product-grid-main" style="grid-template-columns: repeat(4, 1fr);">
+            <!-- Demo items -->
+            <article class="product-card-v2">
+                <a href="#" style="text-decoration: none; color: inherit;">
+                    <div class="product-image-v2" style="aspect-ratio: 1/1;"><img src="images/pro.png" alt=""></div>
+                    <div class="product-info-v2">
+                        <h3 class="product-name-v2" style="font-size: 14px;">Banarasi Silk</h3>
+                        <p class="product-price-v2" style="font-size: 16px;">₹12,490</p>
+                    </div>
+                </a>
+            </article>
+            <article class="product-card-v2">
+                <a href="#" style="text-decoration: none; color: inherit;">
+                    <div class="product-image-v2" style="aspect-ratio: 1/1;"><img src="images/pro2.png" alt=""></div>
+                    <div class="product-info-v2">
+                        <h3 class="product-name-v2" style="font-size: 14px;">Classic Red</h3>
+                        <p class="product-price-v2" style="font-size: 16px;">₹4,290</p>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" aria-label="Footer">
+    <div class="footer-inner">
+      <h2 class="footer-title">Contact us</h2>
+      <p class="footer-address">Nandhini Silks <br>416/9 Aranmanai Street, S.V. Nagaram <br>Arni - 632317,
+        Thiruvannamalai dist</p>
+
+      <div class="footer-contact-grid">
+        <div class="footer-contact-item">
+          <span class="footer-extra-box-1" aria-hidden="true"><img src="images/telephone.svg" alt=""></span>
+          <p class="footer-contact-text">+91 96295 52822</p>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-extra-box-1" aria-hidden="true"><img src="images/telephone.svg" alt=""></span>
+          <p class="footer-contact-text">+91 99945 04410</p>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-extra-box-1" aria-hidden="true"><img src="images/email.svg" alt=""></span>
+          <p class="footer-contact-text">nandhinisilks.arani@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-extra-touch">
+        <div class="footer-extra-title">Get In Touch</div>
+        <div class="footer-extra-icons">
+          <div class="footer-extra-box">
+            <div class="footer-extra-glyph"><a href=""><img src="images/Vector4.svg" alt=""></a></div>
+          </div>
+          <div class="footer-extra-box-1"><a href=""><img src="images/Group.svg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <ul class="footer-links">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="exchange-policy.html">Exchange Policy</a></li>
+          <li><a href="shipping-policy.html">Shipping Policy</a></li>
+          <li><a href="terms-conditions.html">Terms of Service</a></li>
+          <li><a href="fabric-care.html">Fabric Care</a></li>
+          <li><a href="cancellation.html">Cancellation</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">@ 2026 Nandhini Silks | By Reality Graphics</p>
+  </footer>
+
+  <script>
+    function changeImg(src, thumb) {
+      document.getElementById('mainImg').src = src;
+      // Update thumbnail active state
+      const thumbs = document.querySelectorAll('.thumbnail');
+      thumbs.forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+    }
+
+    function updateQty(val) {
+        const input = document.getElementById('qtyDisp');
+        let current = parseInt(input.value);
+        current += val;
+        if (current < 1) current = 1;
+        input.value = current;
+    }
+
+    function switchTab(e, tabId) {
+        // Update tab buttons
+        const btns = document.querySelectorAll('.tab-btn');
+        btns.forEach(b => b.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+
+        // Update tab panes
+        const panes = document.querySelectorAll('.tab-pane');
+        panes.forEach(p => p.style.display = 'none');
+        document.getElementById(tabId).style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>

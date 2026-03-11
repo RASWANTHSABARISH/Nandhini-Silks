@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mens Collection - Nandhini Silks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="top-header">
+    <div class="page-shell header-row">
+      <a href="index.html"><img class="brand" src="images/image 1.png" alt="Logo" /></a>
+
+      <div class="search-wrap">
+        <form action="search.html" method="GET" class="search-box">
+          <img src="images/search.svg" alt="Search" />
+          <input type="text" name="q" placeholder="Search" aria-label="Search" />
+        </form>
+      </div>
+
+      <div class="actions">
+        <a href="wishlist.html" class="icon-btn" aria-label="Favorites">
+          <img src="images/favorite.svg" alt="" width="18" height="23">
+        </a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <img src="images/local_mall.svg" alt="" width="14" height="20" />
+          <span class="cart-count">2</span>
+        </a>
+        <a href="login.html" class="login-btn">Sign in / Login</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="category.html" class="nav-item">Sarees</a>
+      <a href="women.html" class="nav-item">Women</a>
+      <a href="mens.html" class="nav-item active">Mens</a>
+      <a href="kids.html" class="nav-item">Kids</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item">Contact us</a>
+    </div>
+  </nav>
+
+  <main class="category-page">
+    <div class="page-shell">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> &nbsp; / &nbsp; <span>Mens Collection</span>
+      </div>
+
+      <div class="category-layout">
+        <!-- Sidebar Filters -->
+        <aside class="filters-sidebar">
+          <div class="filter-group">
+            <h3 class="filter-title">Price Range</h3>
+            <div class="price-range-container">
+              <div class="slider-track">
+                <div class="slider-fill"></div>
+                <div class="slider-handle" style="left: 20%;"></div>
+                <div class="slider-handle" style="left: 80%;"></div>
+              </div>
+              <div class="range-values">
+                <span>₹500</span>
+                <span>₹20,000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-title">Mens Category</h3>
+            <ul class="filter-list">
+              <li class="filter-item"><label class="filter-label"><input type="checkbox"> Pure Silk Dhotis</label></li>
+              <li class="filter-item"><label class="filter-label"><input type="checkbox"> Formal Shirts</label></li>
+              <li class="filter-item"><label class="filter-label"><input type="checkbox"> Silk Kurtas</label></li>
+              <li class="filter-item"><label class="filter-label"><input type="checkbox"> Wedding Sets</label></li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-title">Fabric / Material</h3>
+            <ul class="filter-list">
+              <li class="filter-item"><label class="filter-label"><input type="checkbox"> Pure Silk</label></li>
+              <li class="filter-item"><label class="filter-label"><input type="checkbox"> Pure Cotton</label></li>
+              <li class="filter-item"><label class="filter-label"><input type="checkbox"> Linen</label></li>
+              <li class="filter-item"><label class="filter-label"><input type="checkbox"> Poly Silk</label></li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-title">Color</h3>
+            <ul class="filter-list">
+              <li class="filter-item"><label class="filter-label"><input type="checkbox"> Ivory / White</label></li>
+              <li class="filter-item"><label class="filter-label"><input type="checkbox"> Gold</label></li>
+              <li class="filter-item"><label class="filter-label"><input type="checkbox"> Maroon</label></li>
+              <li class="filter-item"><label class="filter-label"><input type="checkbox"> Navy Blue</label></li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-title">Rating</h3>
+            <ul class="filter-list">
+              <li class="rating-item">
+                <input type="checkbox">
+                <div class="stars-small">★★★★★</div>
+                <span class="result-count">(12)</span>
+              </li>
+              <li class="rating-item">
+                <input type="checkbox">
+                <div class="stars-small">★★★★☆</div>
+                <span class="result-count">(8)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <label class="stock-toggle">
+              <span>In Stock Only</span>
+              <input type="checkbox" hidden checked>
+              <div class="toggle-switch">
+                <div class="toggle-dot"></div>
+              </div>
+            </label>
+          </div>
+        </aside>
+
+        <!-- Product Listing -->
+        <section class="product-listing">
+          <!-- Filter Chips -->
+          <div class="filter-chips-section">
+            <div class="chips-container">
+                <span class="chip active">All Mens Wear</span>
+                <span class="chip">Traditional Dhotis</span>
+                <span class="chip">Silk Shirts</span>
+                <span class="chip">Kurta Pyjama</span>
+                <span class="chip">Wedding Collection</span>
+            </div>
+          </div>
+
+          <div class="product-listing-header">
+            <div class="header-left">
+                <span class="result-count">Showing 1-6 of 84 products</span>
+            </div>
+            
+            <div style="display: flex; align-items: center;">
+                <div class="view-toggle">
+                    <button class="view-btn active" title="Grid View">
+                        <svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/></svg>
+                    </button>
+                    <button class="view-btn" title="List View">
+                        <svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"/></svg>
+                    </button>
+                </div>
+
+                <select class="sort-select">
+                    <option>Sort By: Popularity</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Newest First</option>
+                </select>
+            </div>
+          </div>
+
+          <div class="product-grid-main">
+            <!-- Product 1 -->
+            <article class="product-card-v2">
+              <div class="card-actions-overlay">
+                <button class="overlay-btn" aria-label="Add to Wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#666"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </button>
+              </div>
+              <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+                <div class="product-image-v2">
+                  <img src="images/mens_silk_dhoti_gold_jari_1773214227860.png" alt="Pure Silk Dhoti">
+                </div>
+                <div class="product-info-v2">
+                  <div class="product-rating-v2">★★★★★</div>
+                  <span class="product-category-v2">Traditional Wear</span>
+                  <h3 class="product-name-v2">Pure Silk Dhoti with Gold Jari</h3>
+                  <p class="product-desc-v2">Premium handloom silk dhoti featuring a rich gold jari border. Ideal for weddings and traditional functions.</p>
+                  <p class="product-price-v2">₹3,490</p>
+                </div>
+              </a>
+              <button class="add-to-cart-v2">Add to Cart</button>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="product-card-v2">
+              <div class="card-actions-overlay">
+                <button class="overlay-btn" aria-label="Add to Wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#666"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </button>
+              </div>
+              <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+                <div class="product-image-v2">
+                  <img src="images/mens_formal_silk_shirt_ivory_1773214241878.png" alt="Silk Shirt">
+                </div>
+                <div class="product-info-v2">
+                  <div class="product-rating-v2">★★★★☆</div>
+                  <span class="product-category-v2">Formal Wear</span>
+                  <h3 class="product-name-v2">Ivory Silk Formal Shirt</h3>
+                  <p class="product-desc-v2">Elegant ivory silk shirt with a subtle sheen, designed for a sophisticated look at formal events.</p>
+                  <p class="product-price-v2">₹2,290</p>
+                </div>
+              </a>
+              <button class="add-to-cart-v2">Add to Cart</button>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="product-card-v2">
+              <div class="card-actions-overlay">
+                <button class="overlay-btn" aria-label="Add to Wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#666"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </button>
+              </div>
+              <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+                <div class="product-image-v2">
+                  <img src="images/mens_traditional_silk_kurta_maroon_1773214257954.png" alt="Silk Kurta">
+                </div>
+                <div class="product-info-v2">
+                  <div class="product-rating-v2">★★★★★</div>
+                  <span class="product-category-v2">Traditional Wear</span>
+                  <h3 class="product-name-v2">Royal Maroon Silk Kurta</h3>
+                  <p class="product-desc-v2">Luxury silk kurta with intricate embroidery on neck and cuffs, perfect for weddings and festivities.</p>
+                  <p class="product-price-v2">₹4,490</p>
+                </div>
+              </a>
+              <button class="add-to-cart-v2">Add to Cart</button>
+            </article>
+          </div>
+
+          <div class="load-more-container">
+            <button class="btn-load-more">Load More Products</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" aria-label="Footer">
+    <div class="footer-inner">
+      <h2 class="footer-title">Contact us</h2>
+      <p class="footer-address">Nandhini Silks <br>416/9 Aranmanai Street, S.V. Nagaram <br>Arni - 632317,
+        Thiruvannamalai dist</p>
+
+      <div class="footer-contact-grid">
+        <div class="footer-contact-item">
+          <span class="footer-extra-box-1" aria-hidden="true"><img src="images/telephone.svg" alt=""></span>
+          <p class="footer-contact-text">+91 96295 52822</p>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-extra-box-1" aria-hidden="true"><img src="images/telephone.svg" alt=""></span>
+          <p class="footer-contact-text">+91 99945 04410</p>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-extra-box-1" aria-hidden="true"><img src="images/email.svg" alt=""></span>
+          <p class="footer-contact-text">nandhinisilks.arani@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <ul class="footer-links">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="exchange-policy.html">Exchange Policy</a></li>
+          <li><a href="shipping-policy.html">Shipping Policy</a></li>
+          <li><a href="terms-conditions.html">Terms of Service</a></li>
+          <li><a href="fabric-care.html">Fabric Care</a></li>
+          <li><a href="cancellation.html">Cancellation</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">@ 2026 Nandhini Silks | By Reality Graphics</p>
+  </footer>
+  <script>
+    // Grid/List View Toggle Logic
+    const viewBtns = document.querySelectorAll('.view-btn');
+    const productContainer = document.querySelector('.product-grid-main');
+
+    viewBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            viewBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            if (btn.title === 'List View') {
+                productContainer.classList.add('view-list');
+            } else {
+                productContainer.classList.remove('view-list');
+            }
+        });
+    });
+  </script>
+</body>
+
+</html>

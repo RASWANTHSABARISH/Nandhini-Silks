@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Register | Nandhini Silks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="top-header">
+    <div class="page-shell header-row">
+      <a href="index.html"><img class="brand" src="images/image 1.png" alt="Logo" /></a>
+
+      <div class="search-wrap">
+        <form action="search.html" method="GET" class="search-box">
+          <img src="images/search.svg" alt="Search" />
+          <input type="text" name="q" placeholder="Search" aria-label="Search" />
+        </form>
+      </div>
+
+      <div class="actions">
+        <a href="wishlist.html" class="icon-btn" aria-label="Favorites">
+          <img src="images/favorite.svg" alt="" width="18" height="23">
+        </a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <img src="images/local_mall.svg" alt="" width="14" height="20" />
+          <span class="cart-count">2</span>
+        </a>
+        <a href="login.html" class="login-btn">Sign in / Login</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="category.html" class="nav-item">Sarees</a>
+      <a href="women.html" class="nav-item">Women</a>
+      <a href="mens.html" class="nav-item">Mens</a>
+      <a href="kids.html" class="nav-item">Kids</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item">Contact us</a>
+    </div>
+  </nav>
+
+  <main class="auth-page">
+    <div class="auth-container">
+      <div class="auth-form-side">
+        <div class="auth-header">
+          <h1 class="auth-title">Welcome Back</h1>
+          <p class="auth-subtitle">Elevate your elegance with Nandhini Silks</p>
+        </div>
+
+        <div class="auth-tabs" id="authTabs">
+          <button class="auth-tab active" id="loginTab">Login</button>
+          <button class="auth-tab" id="registerTab">Register</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form" novalidate>
+          <div class="form-group" id="loginEmailGroup">
+            <label class="form-label" for="loginEmail">Email Address</label>
+            <input class="form-input" type="email" id="loginEmail" placeholder="Enter your email" required>
+            <span class="error-msg" id="loginEmailError">Please enter a valid email address.</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="loginPassword">Password</label>
+            <input class="form-input" type="password" id="loginPassword" placeholder="Enter your password" required>
+          </div>
+          
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox"> Remember me
+            </label>
+            <a href="#" class="forgot-password" id="forgotPassBtn">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="auth-submit">Login</button>
+        </form>
+
+        <!-- Register Form (Hidden by default) -->
+        <form id="registerForm" class="auth-form" style="display: none;" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="regName">Full Name</label>
+            <input class="form-input" type="text" id="regName" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group" id="regEmailGroup">
+            <label class="form-label" for="regEmail">Email Address</label>
+            <input class="form-input" type="email" id="regEmail" placeholder="Enter your email" required>
+            <span class="error-msg" id="regEmailError">Please enter a valid email address.</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regPhone">Phone Number</label>
+            <input class="form-input" type="tel" id="regPhone" placeholder="Enter your phone number" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regPassword">Password</label>
+            <input class="form-input" type="password" id="regPassword" placeholder="Create a password" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regConfirm">Confirm Password</label>
+            <input class="form-input" type="password" id="regConfirm" placeholder="Confirm your password" required>
+          </div>
+          
+          <div class="form-group" id="regTermsGroup">
+            <label class="remember-me" style="font-size: 13px;">
+              <input type="checkbox" id="regTermsCheckbox" required> I accept the <a href="terms-conditions.html" style="color: var(--pink);">Terms & Conditions</a>
+            </label>
+            <span class="error-msg" id="regTermsError" style="display: block; opacity: 0; pointer-events: none;">Confirm Checkbox</span>
+          </div>
+
+          <button type="submit" class="auth-submit">Register</button>
+        </form>
+
+        <!-- Forgot Password Form -->
+        <form id="forgotForm" class="auth-form" style="display: none;" novalidate>
+          <div class="form-group" id="forgotEmailGroup">
+            <label class="form-label" for="forgotEmail">Email Address</label>
+            <input class="form-input" type="email" id="forgotEmail" placeholder="Enter your registered email" required>
+            <span class="error-msg" id="forgotEmailError">Please enter a valid email address.</span>
+          </div>
+          <button type="submit" class="auth-submit">Send Reset Link</button>
+        </form>
+
+        <!-- Reset Password Form -->
+        <form id="resetForm" class="auth-form" style="display: none;" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="newPassword">New Password</label>
+            <input class="form-input" type="password" id="newPassword" placeholder="Enter new password" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="confirmNewPassword">Confirm New Password</label>
+            <input class="form-input" type="password" id="confirmNewPassword" placeholder="Confirm new password" required>
+          </div>
+          <button type="submit" class="auth-submit">Submit</button>
+        </form>
+
+        <div class="auth-footer" id="authFooter">
+          <span>Don't have an account? </span>
+          <a href="#" id="toggleToRegister">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" aria-label="Footer">
+    <div class="footer-inner">
+      <h2 class="footer-title">Contact us</h2>
+      <p class="footer-address">Nandhini Silks <br>416/9 Aranmanai Street, S.V. Nagaram <br>Arni - 632317,
+        Thiruvannamalai dist</p>
+
+      <div class="footer-contact-grid">
+        <div class="footer-contact-item">
+          <span class="footer-extra-box-1" aria-hidden="true"><img src="images/telephone.svg" alt=""></span>
+          <p class="footer-contact-text">+91 96295 52822</p>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-extra-box-1" aria-hidden="true"><img src="images/telephone.svg" alt=""></span>
+          <p class="footer-contact-text">+91 99945 04410</p>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-extra-box-1" aria-hidden="true"><img src="images/email.svg" alt=""></span>
+          <p class="footer-contact-text">nandhinisilks.arani@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-extra-touch">
+        <div class="footer-extra-title">Get In Touch</div>
+        <div class="footer-extra-icons">
+          <div class="footer-extra-box">
+            <div class="footer-extra-glyph"><a href=""><img src="images/Vector4.svg" alt=""></a></div>
+          </div>
+          <div class="footer-extra-box-1"><a href=""><img src="images/Group.svg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <ul class="footer-links">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="exchange-policy.html">Exchange Policy</a></li>
+          <li><a href="shipping-policy.html">Shipping Policy</a></li>
+          <li><a href="terms-conditions.html">Terms of Service</a></li>
+          <li><a href="fabric-care.html">Fabric Care</a></li>
+          <li><a href="cancellation.html">Cancellation</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">@ 2026 Nandhini Silks | By Reality Graphics</p>
+  </footer>
+
+  <script>
+    const loginTab = document.getElementById('loginTab');
+    const registerTab = document.getElementById('registerTab');
+    const authTabs = document.getElementById('authTabs');
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+    const forgotForm = document.getElementById('forgotForm');
+    const resetForm = document.getElementById('resetForm');
+    const authTitle = document.querySelector('.auth-title');
+    const authSubtitle = document.querySelector('.auth-subtitle');
+    const authFooter = document.getElementById('authFooter');
+    const forgotPassBtn = document.getElementById('forgotPassBtn');
+
+    function hideAllForms() {
+        loginForm.style.display = 'none';
+        registerForm.style.display = 'none';
+        forgotForm.style.display = 'none';
+        resetForm.style.display = 'none';
+        document.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
+    }
+
+    function showLogin() {
+      hideAllForms();
+      authTabs.style.display = 'flex';
+      loginTab.classList.add('active');
+      registerTab.classList.remove('active');
+      loginForm.style.display = 'block';
+      authTitle.textContent = 'Welcome Back';
+      authSubtitle.textContent = 'Elevate your elegance with Nandhini Silks';
+      authFooter.innerHTML = '<span>Don\'t have an account? </span><a href="#" id="toggleToRegister">Register Now</a>';
+      attachToggleEvent();
+    }
+
+    function showRegister() {
+      hideAllForms();
+      authTabs.style.display = 'flex';
+      registerTab.classList.add('active');
+      loginTab.classList.remove('active');
+      registerForm.style.display = 'block';
+      authTitle.textContent = 'Join Us';
+      authSubtitle.textContent = 'Be part of the Nandhini Silks collection';
+      authFooter.innerHTML = '<span>Already have an account? </span><a href="#" id="toggleToLogin">Login Now</a>';
+      attachToggleEvent();
+    }
+
+    function showForgot() {
+        hideAllForms();
+        authTabs.style.display = 'none';
+        forgotForm.style.display = 'block';
+        authTitle.textContent = 'Forgot Password';
+        authSubtitle.textContent = 'We will send you a link to reset your password';
+        authFooter.innerHTML = '<a href="#" id="backToLogin">Back to Login</a>';
+        attachToggleEvent();
+    }
+
+    // Demo: Trigger reset flow after forgot form submission
+    forgotForm.onsubmit = function(e) {
+        e.preventDefault();
+        const email = document.getElementById('forgotEmail').value;
+        if (!email.includes('@')) {
+            document.getElementById('forgotEmailGroup').classList.add('has-error');
+        } else {
+            alert('Reset link sent to ' + email + '. Redirecting to reset page...');
+            showReset();
+        }
+    };
+
+    function showReset() {
+        hideAllForms();
+        authTabs.style.display = 'none';
+        resetForm.style.display = 'block';
+        authTitle.textContent = 'Reset Password';
+        authSubtitle.textContent = 'Create a secure new password for your account';
+        authFooter.innerHTML = '<a href="#" id="backToLogin">Back to Login</a>';
+        attachToggleEvent();
+    }
+
+    loginForm.onsubmit = function(e) {
+        e.preventDefault();
+        const email = document.getElementById('loginEmail').value;
+        const group = document.getElementById('loginEmailGroup');
+        const emailError = document.getElementById('loginEmailError');
+        if (!email || !email.includes('@')) {
+            group.classList.add('has-error');
+            emailError.textContent = email ? 'Please enter a valid email address.' : 'Email is required.';
+        } else {
+            group.classList.remove('has-error');
+            window.location.href = 'my-account.html';
+        }
+    };
+
+    registerForm.onsubmit = function(e) {
+        e.preventDefault();
+        const email = document.getElementById('regEmail').value;
+        const terms = document.getElementById('regTermsCheckbox').checked;
+        const group = document.getElementById('regEmailGroup');
+        const termsGroup = document.getElementById('regTermsGroup');
+        const termsError = document.getElementById('regTermsError');
+        const emailError = document.getElementById('regEmailError');
+        
+        let isValid = true;
+
+        if (!email || !email.includes('@')) {
+            group.classList.add('has-error');
+            emailError.textContent = email ? 'Please enter a valid email address.' : 'Email is required.';
+            isValid = false;
+        } else {
+            group.classList.remove('has-error');
+        }
+
+        if (!terms) {
+            termsGroup.classList.add('has-error');
+            termsError.style.opacity = '1';
+            isValid = false;
+        } else {
+            termsGroup.classList.remove('has-error');
+            termsError.style.opacity = '0';
+        }
+
+        if (isValid) {
+            alert('Registration successful (Demo mode)');
+        }
+    };
+
+    resetForm.onsubmit = function(e) {
+        e.preventDefault();
+        alert('Password reset successful! You can now login.');
+        showLogin();
+    };
+
+    function attachToggleEvent() {
+      const toReg = document.getElementById('toggleToRegister');
+      const toLog = document.getElementById('toggleToLogin');
+      const backLog = document.getElementById('backToLogin');
+      if (toReg) toReg.onclick = (e) => { e.preventDefault(); showRegister(); };
+      if (toLog) toLog.onclick = (e) => { e.preventDefault(); showLogin(); };
+      if (backLog) backLog.onclick = (e) => { e.preventDefault(); showLogin(); };
+    }
+
+    forgotPassBtn.onclick = (e) => { e.preventDefault(); showForgot(); };
+    loginTab.onclick = showLogin;
+    registerTab.onclick = showRegister;
+    attachToggleEvent();
+  </script>
+</body>
+
+</html>
