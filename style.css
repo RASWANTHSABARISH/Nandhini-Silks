@@ -928,7 +928,7 @@ body {
   width: 100%;
   flex-wrap: nowrap;
   align-items: stretch;
-  animation: scroll-testimonials 25s ease-in-out infinite;
+  animation: scroll-testimonials 21s ease-in-out infinite;
 }
 
 .testimonial-grid[aria-hidden="true"] {
@@ -950,9 +950,9 @@ body {
 }
 
 @keyframes scroll-testimonials {
-  0%, 20% { transform: translateX(0); }
-  33%, 53% { transform: translateX(calc((-100% - 50px) / 3 * 1)); }
-  66%, 86% { transform: translateX(calc((-100% - 50px) / 3 * 2)); }
+  0%, 28.5% { transform: translateX(0); }
+  33.33%, 61.83% { transform: translateX(calc((-100% - 50px) / 3 * 1)); }
+  66.66%, 95.16% { transform: translateX(calc((-100% - 50px) / 3 * 2)); }
   100% { transform: translateX(calc(-100% - 50px)); }
 }
 
@@ -1596,25 +1596,29 @@ body {
   }
 
   .testimonial-grid {
-    animation: scroll-testimonials-mobile 25s ease-in-out infinite !important;
+    display: flex !important;
+    width: max-content !important;
+    flex-shrink: 0 !important;
+    animation: scroll-testimonials-mobile 21s ease-in-out infinite !important;
     gap: 16px !important;
-    padding: 0 16px !important;
+    padding: 0 0 0 16px !important;
     box-sizing: border-box;
   }
 
   .testimonial-card {
     flex: 0 0 calc(100vw - 32px) !important;
     width: calc(100vw - 32px) !important;
+    margin: 0 !important;
     border-radius: 15px !important;
-    padding: 20px 30px !important;
+    padding: 20px 24px !important;
     box-sizing: border-box;
   }
 
   @keyframes scroll-testimonials-mobile {
-    0%, 20% { transform: translateX(0); }
-    33%, 53% { transform: translateX(-100vw); }
-    66%, 86% { transform: translateX(-200vw); }
-    100% { transform: translateX(-300vw); }
+    0%, 28.5% { transform: translateX(0); }
+    33.33%, 61.83% { transform: translateX(calc(-100vw + 16px)); }
+    66.66%, 95.16% { transform: translateX(calc(-200vw + 32px)); }
+    100% { transform: translateX(calc(-300vw + 48px)); }
   }
 }
 
