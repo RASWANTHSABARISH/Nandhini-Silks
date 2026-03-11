@@ -42,17 +42,53 @@
 
   <nav class="nav-bar" aria-label="Primary">
     <div class="nav-inner">
-      <span class="nav-item">Sarees</span>
-      <span class="nav-item">Women</span>
-      <span class="nav-item">Mens</span>
-      <span class="nav-item">Kids</span>
-      <span class="nav-item">About</span>
-      <span class="nav-item">Contact us</span>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <span class="nav-item">Sarees</span>
+        <span class="nav-item">Women</span>
+        <span class="nav-item">Mens</span>
+        <span class="nav-item">Kids</span>
+        <span class="nav-item">About</span>
+        <span class="nav-item">Contact us</span>
+      </div>
     </div>
   </nav>
 
-  <section class="hero">
-    <img src="images/banner 1.png" alt="Banner" />
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+      });
+    });
+  </script>
+
+  <section class="hero" aria-label="Hero Banner">
+    <div class="hero-marquee">
+      <div class="hero-grid">
+        <div class="hero-slide">
+          <img src="images/banner 1.png" alt="Banner 1" />
+        </div>
+        <div class="hero-slide">
+          <img src="images/banner 1.jpg" alt="Banner 2" />
+        </div>
+      </div>
+      <div class="hero-grid" aria-hidden="true">
+        <div class="hero-slide">
+          <img src="images/banner 1.png" alt="Banner 1" />
+        </div>
+        <div class="hero-slide">
+          <img src="images/banner 1.jpg" alt="Banner 2" />
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="collection-section" aria-labelledby="saree-collections-title">
@@ -380,6 +416,9 @@
   </section>
   <section class="promo-section" aria-label="Promotions">
     <article class="offer-card">
+      <div class="offer-image-wrap">
+        <img class="offer-image" src="images/Rectangle 31.png" alt="Special Offer" />
+      </div>
       <div class="offer-content">
         <h2 class="offer-title">Up to 20% off, only for this month</h2>
         <p class="offer-text">Shop now and enjoy up to 10% off on selected items. Limited time only!</p>
@@ -412,16 +451,16 @@
           </defs>
 
           <!-- Line 1 -->
-          <text x="55%" y="180" text-anchor="middle" fill="url(#textFill)" stroke="url(#strokeGradient)" stroke-width="3" paint-order="stroke">
+          <text x="0" y="180" text-anchor="start" fill="url(#textFill)" stroke="url(#strokeGradient)" stroke-width="3" paint-order="stroke">
             Wedding
           </text>
 
           <!-- Line 2 -->
-          <text x="50%" y="400" text-anchor="middle" fill="url(#textFill)" stroke="url(#strokeGradient)" stroke-width="3" paint-order="stroke">
+          <text x="0" y="400" text-anchor="start" fill="url(#textFill)" stroke="url(#strokeGradient)" stroke-width="3" paint-order="stroke">
             Collections
           </text>
         </svg>
-        <p class="wedding-text">Flamboyantly charming, the Scarlet Satin Delight Saree embodies grandeur<br> and
+        <p class="wedding-text">Flamboyantly charming, the Scarlet Satin Delight Saree embodies grandeur and
           romance. Rendered in a vivacious shade of red.</p>
         <button class="wedding-cta" type="button">Shop Now</button>
       </div>
@@ -434,27 +473,51 @@
       <img class="testimonial-vector" src="images/Vector2.svg" alt="Quote icon" />
     </div>
 
-    <div class="testimonial-grid">
-      <article class="testimonial-card">
-        <h3 class="testimonial-card-title">Beautiful elegant <br>saree</h3>
-        <p class="testimonial-text">I recently ordered this saree online, and I am extremely happy with my purchase. The
-          saree looked exactly like the pictures shown on the website. The color was vibrant, and the fabric quality was
-          even better than I expected.</p>
-        <p class="testimonial-name">Ramya</p>
-      </article>
-      <article class="testimonial-card">
-        <h3 class="testimonial-card-title">Excellent collection - conveniently<br> arranged</h3>
-        <p class="testimonial-text">Comfortable, feather-light, and easy to wear. specially i like the packaging 👌🏻
-        </p>
-        <p class="testimonial-name">Kanmani</p>
-      </article>
-
-      <article class="testimonial-card">
-        <h3 class="testimonial-card-title">Quality of saree</h3>
-        <p class="testimonial-text">My product is very beautiful,,, The product I <br>purchased was exactly as I
-          thought, in the <br>same fabric, same colour and combination, I <br>am very happy with this saree.</p>
-        <p class="testimonial-name">Yazh</p>
-      </article>
+    <div class="testimonial-marquee">
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <h3 class="testimonial-card-title">Beautiful elegant <br>saree</h3>
+          <p class="testimonial-text">I recently ordered this saree online, and I am extremely happy with my purchase. The
+            saree looked exactly like the pictures shown on the website. The color was vibrant, and the fabric quality was
+            even better than I expected.</p>
+          <p class="testimonial-name">Ramya</p>
+        </article>
+        <article class="testimonial-card">
+          <h3 class="testimonial-card-title">Excellent collection - conveniently<br> arranged</h3>
+          <p class="testimonial-text">Comfortable, feather-light, and easy to wear. specially i like the packaging 👌🏻
+          </p>
+          <p class="testimonial-name">Kanmani</p>
+        </article>
+  
+        <article class="testimonial-card">
+          <h3 class="testimonial-card-title">Quality of saree</h3>
+          <p class="testimonial-text">My product is very beautiful,,, The product I <br>purchased was exactly as I
+            thought, in the <br>same fabric, same colour and combination, I <br>am very happy with this saree.</p>
+          <p class="testimonial-name">Yazh</p>
+        </article>
+      </div>
+      <div class="testimonial-grid" aria-hidden="true">
+        <article class="testimonial-card">
+          <h3 class="testimonial-card-title">Beautiful elegant <br>saree</h3>
+          <p class="testimonial-text">I recently ordered this saree online, and I am extremely happy with my purchase. The
+            saree looked exactly like the pictures shown on the website. The color was vibrant, and the fabric quality was
+            even better than I expected.</p>
+          <p class="testimonial-name">Ramya</p>
+        </article>
+        <article class="testimonial-card">
+          <h3 class="testimonial-card-title">Excellent collection - conveniently<br> arranged</h3>
+          <p class="testimonial-text">Comfortable, feather-light, and easy to wear. specially i like the packaging 👌🏻
+          </p>
+          <p class="testimonial-name">Kanmani</p>
+        </article>
+  
+        <article class="testimonial-card">
+          <h3 class="testimonial-card-title">Quality of saree</h3>
+          <p class="testimonial-text">My product is very beautiful,,, The product I <br>purchased was exactly as I
+            thought, in the <br>same fabric, same colour and combination, I <br>am very happy with this saree.</p>
+          <p class="testimonial-name">Yazh</p>
+        </article>
+      </div>
     </div>
   </section>
 
